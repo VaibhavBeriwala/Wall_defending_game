@@ -228,11 +228,11 @@ void level2(){
         if(scp1==0 || scp2==0 || scp3==0 || scp4==0) break;
         ball_ctr++;
         //send the message to all clients
-        if(changes || (ball_ctr==prev_ball+800000)){
+        if(changes || (ball_ctr==prev_ball+650000)){
             for(peers=0;peers<4;peers++){
                 buf[0]=peers;
                 //usleep(120000);
-                if(ball_ctr==prev_ball+800000){
+                if(ball_ctr==prev_ball+650000){
                     prev_ball = ball_ctr;
                     ball(&x1,&y1,&direction1,f1,f2,f3,f4,1);
                     //ball(&x2,&y2,&direction2,f1,f2,f3,f4);
